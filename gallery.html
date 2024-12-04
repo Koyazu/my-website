@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarawak Gallery</title>
+    <style>
+        /* Reset and base styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        /* Navigation bar styling */
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links > li {
+            margin: 0 15px;
+        }
+
+        .nav-links > li > a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .nav-links > li > a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Gallery styling */
+        .gallery {
+            column-count: 3;
+            column-gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            margin-bottom: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+            filter: brightness(0.8);
+        }
+
+        /* Lightbox overlay */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: #ccc;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .gallery {
+                column-count: 2;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .gallery {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="accommodation.html">Accommodation</a></li>
+            <li><a href="things-to-do.html">Things to Do</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="best-places.html">Best Places</a></li>
+            <li><a href="food-&-lifestyle.html">Food & Lifestyle</a></li>
+        </ul>
+    </nav>
+
+    <h1>Sarawak Gallery</h1>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="slide1.jpg" alt="Sarawak Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="slide2.jpg" alt="Sarawak Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="slide3.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="camping1.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="camping2.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="camping3.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="camping4.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="getting-here.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="homestay1.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="homestay2.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="homestay3.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="homestay4.jpeg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="hotel1.jpeg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="hotel2.jpeg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="hotel3.jpeg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="hotel4.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="our-story.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="transportation.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="why-visit.png" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="rainforest.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="santubong.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="siniawan.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="damai.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="permai.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="bidayuh-longhouse.jpg" alt="Sarawak Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="kampung-stay.jpg" alt="Sarawak Image 3">
+        </div>
+        <!-- Add more images as needed -->
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="#" alt="Expanded View">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Sarawak Tourism. All Rights Reserved. | <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <script>
+        // Lightbox Functionality
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = item.src;
+                lightboxImg.alt = item.alt;
+            });
+        });
+
+        lightboxClose.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

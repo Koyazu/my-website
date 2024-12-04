@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Website</title>
+    <style>
+        /* Reset some default styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links > li {
+            position: relative;
+        }
+
+        .nav-links > li > a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .nav-links > li > a:hover {
+            background-color: #555;
+        }
+
+        /* Dropdown menu styling */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: none;
+            min-width: 200px;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: #555;
+        }
+
+        /* Slideshow container styling */
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slideshow-container .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            animation: slide 15s infinite;
+        }
+
+        .slideshow-container .slide:nth-child(1) {
+            background-image: url('slide1.jpg');
+            animation-delay: 0s;
+        }
+
+        .slideshow-container .slide:nth-child(2) {
+            background-image: url('slide2.jpg');
+            animation-delay: 5s;
+        }
+
+        .slideshow-container .slide:nth-child(3) {
+            background-image: url('slide3.jpg');
+            animation-delay: 10s;
+        }
+
+        @keyframes slide {
+            0% { opacity: 1; }
+            33% { opacity: 1; }
+            66% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .centered-text h1 {
+            font-size: 5em;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .centered-text p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            margin: 10px 0;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-section h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #f4f4f4;
+        }
+
+        .footer-section a {
+            text-decoration: none;
+            color: #ccc;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            transition: transform 0.2s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            color: #aaa;
+            font-size: 14px;
+        }
+        section {
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="#">About</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#our-story">Our Story</a></li>
+                    <li><a href="#why-visit">Why Visit</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <li><a href="travel.html">Travel</a></li>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Getting Here</a></li>
+                    <li><a href="#">Transportation</a></li>
+                    <li><a href="#">Travel Tips</a></li>
+                    <li><a href="#">Travel Packages</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="accommodation.html">Accommodation</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#hotels">Hotels</a></li>
+                    <li><a href="#homestays">Homestays</a></li>
+                    <li><a href="#">Camping/Glamping</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="things-to-do.html">Things to Do</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Adventure Activities</a></li>
+                    <li><a href="#">Cultural Experiences</a></li>
+                    <li><a href="#">Nature & Wildlife</a></li>
+                    <li><a href="#">City Life</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="gallery.html">Gallery</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Photos</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Virtual Tours</a></li>
+                    <li><a href="#">Traveler Stories</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="best-places.html">Best Places</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Top Destinations</a></li>
+                    <li><a href="#">Hidden Gems</a></li>
+                    <li><a href="#">Seasonal Spots</a></li>
+                    <li><a href="#">Romantic Getaways</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="food-&-lifestyle.html">Food & Lifestyle</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Local Cuisine</a></li>
+                    <li><a href="#">Restaurants & Cafes</a></li>
+                    <li><a href="#">Street Food</a></li>
+                    <li><a href="#">Lifestyle Experiences</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Slideshow Section -->
+    <div class="slideshow-container">
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="centered-text">
+            <h1>Explore Sarawak</h1>
+            <p>Discover the wonders of nature, culture, and adventure in Malaysia's paradise.</p>
+        </div>
+    </div>
+    <!-- Our Story Section -->
+        <section id="our-story" style="padding: 50px; background-color: #f8f9fa;">
+            <h2>Our Story</h2>
+            <p>
+                Sarawak, often referred to as the "Land of the Hornbills," has a fascinating history shaped by its indigenous tribes, vibrant culture, and rich natural resources. Once ruled by the White Rajahs, it now thrives as a hub of cultural heritage and natural wonders.
+            </p>
+            <img src="our-story.jpg" alt="Sarawak's History" style="width: 100%; max-width: 800px; margin: 20px 0;">
+        </section>
+
+        <!-- Why Visit Section -->
+        <section id="why-visit" style="padding: 50px; background-color: #ffffff;">
+            <h2>Why Visit Sarawak?</h2>
+            <p>
+                Sarawak offers unparalleled experiences for nature lovers, adventurers, and culture enthusiasts. From its ancient rainforests and majestic caves to its vibrant festivals and delicious cuisine, Sarawak is truly a destination for everyone.
+            </p>
+            <img src="why-visit.png" alt="Beautiful Sarawak" style="width: 100%; max-width: 800px; margin: 20px 0;">
+        </section>
+
+        <!-- FAQs Section -->
+        <section id="faqs" style="padding: 50px; background-color: #f8f9fa;">
+            <h2>FAQs</h2>
+            <ul>
+                <li><strong>Q: What is the best time to visit Sarawak?</strong> A: March to October for dry weather and festivals.</li>
+                <li><strong>Q: Do I need a visa to visit Sarawak?</strong> A: Citizens of many countries can enter Malaysia visa-free for short stays. Check your country’s requirements.</li>
+                <li><strong>Q: What are must-visit attractions?</strong> A: Gunung Mulu National Park, Bako National Park, and Kuching's cultural sites.</li>
+    </ul>
+</section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="#">About Us</a>
+            <a href="travel.html">Travel Tips</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>Email: info@sarawak.com</p>
+            <p>Phone: +60 123 456 789</p>
+            <p>Address: Sarawak, Malaysia</p>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#">&#xf09a;</a>
+                <a href="#">&#xf099;</a>
+                <a href="#">&#xf16d;</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        &copy; 2024 Sarawak Tourism. All Rights Reserved.
+    </

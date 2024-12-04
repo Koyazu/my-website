@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food & Lifestyle in Sarawak</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #555;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #444;
+        }
+
+        .section {
+            padding: 40px 10%;
+        }
+
+        .category {
+            margin-bottom: 50px;
+        }
+
+        .category h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .category .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .category .item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: calc(50% - 20px);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .category .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .item .description {
+            padding: 15px;
+        }
+
+        .item .description h3 {
+            margin: 0 0 10px;
+            color: #333;
+        }
+
+        .item .description p {
+            margin: 0;
+            color: #666;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="accommodation.html">Accommodation</a></li>
+            <li><a href="things-to-do.html">Things to Do</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="best-places.html">Best Places</a></li>
+            <li><a href="food-&-lifestyle.html">Food & Lifestyle</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content Section -->
+    <h1>Food & Lifestyle in Sarawak</h1>
+    <div class="section">
+        <!-- Local Food -->
+        <div class="category">
+            <h2>Local Food</h2>
+            <div class="content">
+                <div class="item">
+                    <img src="laksa.jpg" alt="Laksa Sarawak">
+                    <div class="description">
+                        <h3>Laksa Sarawak</h3>
+                        <p>A spicy, coconut-based noodle soup packed with prawns, shredded chicken, and bean sprouts.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="kolo-mee.jpg" alt="Kolo Mee">
+                    <div class="description">
+                        <h3>Kolo Mee</h3>
+                        <p>Flavorful noodles with minced pork, char siu, and scallions in a light soy sauce.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="manok-pansoh.jpg" alt="Manok Pansoh">
+                    <div class="description">
+                        <h3>Manok Pansoh</h3>
+                        <p>Chicken cooked in bamboo with aromatic herbs, a traditional Dayak dish.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="umai.jpg" alt="Umai">
+                    <div class="description">
+                        <h3>Umai</h3>
+                        <p>A Melanau specialty, this raw fish salad is marinated with lime juice, onions, and chilies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cafes -->
+        <div class="category">
+            <h2>Cafes</h2>
+            <div class="content">
+                <div class="item">
+                    <img src="rustic-cafe.jpg" alt="Rustic Cafe">
+                    <div class="description">
+                        <h3>Rustic Cafes</h3>
+                        <p>Cozy, aesthetically pleasing cafes perfect for relaxing with local brews.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="hipster-cafe.jpg" alt="Hipster Cafe">
+                    <div class="description">
+                        <h3>Hipster Spots</h3>
+                        <p>Trendy cafes offering creative drinks and Instagrammable interiors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Street Food -->
+        <div class="category">
+            <h2>Street Food</h2>
+            <div class="content">
+                <div class="item">
+                    <img src="satay.jpg" alt="Satay">
+                    <div class="description">
+                        <h3>Satay</h3>
+                        <p>Grilled meat skewers served with spicy peanut sauce.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="rojak.jpg" alt="Rojak">
+                    <div class="description">
+                        <h3>Rojak</h3>
+                        <p>A local salad mix of fruits, vegetables, and a tangy peanut dressing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lifestyle -->
+        <div class="category">
+            <h2>Lifestyle Experiences</h2>
+            <div class="content">
+                <div class="item">
+                    <img src="kampung-stay.jpg" alt="Kampung Stay">
+                    <div class="description">
+                        <h3>Kampung Stays</h3>
+                        <p>Immerse yourself in the traditional lifestyle of Sarawakian villages.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="bidayuh-longhouse.jpg" alt="Bidayuh Longhouse">
+                    <div class="description">
+                        <h3>Bidayuh Longhouse Visits</h3>
+                        <p>Discover the culture and history of Sarawak's indigenous communities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">© 2024 Your Tourism Website. All rights reserved.</div>
+    </footer>
+</body>
+</html>

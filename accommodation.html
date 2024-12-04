@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodation in Sarawak</title>
+    <style>
+        /* Reset and basic styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .category-title {
+            margin: 30px 0 10px;
+            text-align: center;
+            font-size: 1.8em;
+            color: #444;
+        }
+
+        /* Navigation bar styling */
+        .navbar {
+            background-color: #333;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links > li {
+            position: relative;
+        }
+
+        .nav-links > li > a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .nav-links > li > a:hover {
+            background-color: #555;
+        }
+
+        /* Main content styling */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .accommodation-box {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .accommodation-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.2);
+        }
+
+        .content {
+            padding: 15px;
+        }
+
+        .content h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .content p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .content .attractions {
+            margin-top: 10px;
+        }
+
+        .content .attractions strong {
+            color: #333;
+        }
+
+        .content .location {
+            margin-top: 5px;
+            font-style: italic;
+            color: #888;
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            margin: 10px 0;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-section h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #f4f4f4;
+        }
+
+        .footer-section a {
+            text-decoration: none;
+            color: #ccc;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            color: #aaa;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="accommodation.html">Accommodation</a></li>
+            <li><a href="things-to-do.html">Things to Do</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="best-places.html">Best Places</a></li>
+            <li><a href="food-&-lifestyle.html">Food & Lifestyle</a></li>
+        </ul>
+    </nav>
+
+    <h1>Accommodation in Sarawak</h1>
+
+    <!-- Hotels -->
+    <section id="hotels" style="padding: 50px; background-color: #f8f9fa;">
+    <div class="category-title">Hotels</div>
+    <div class="container">
+        <!-- Hotel 1 -->
+        <div class="accommodation-box">
+            <div class="image-container">
+                <img src="hotel1.jpeg" alt="Hotel 1">
+            </div>
+            <div class="content">
+                <h3>Grand Kuching Hotel</h3>
+                <p>A luxurious hotel offering modern amenities.</p>
+                <div class="attractions">
+                    <strong>Nearby Attractions:</strong> Sarawak Museum, Waterfront Esplanade.
+                </div>
+                <div class="location">Kuching City Center</div>
+            </div>
+        </div>
+
+        <!-- Hotel 2 -->
+        <div class="accommodation-box">
+            <div class="image-container">
+                <img src="hotel2.jpeg" alt="Hotel 2">
+            </div>
+            <div class="content">
+                <h3>Pullman Kuching</h3>
+                <p> A luxurious 5-star hotel in the heart of Kuching city, Pullman offers spacious rooms with modern decor, excellent dining options, and panoramic views of the city.</p>
+                <div class="attractions">
+                    <strong>Nearby Attractions:</strong> Kuching Waterfront, Sarawak Museum, Main Bazaar.
+                </div>
+                <div class="location">Jalan Mathies, Kuching City Center.</div>
+            </div>
+        </div>
+
+        <div class="accommodation-box">
+            <div class="image-container">
+                <img src="hotel3.jpeg" alt="Hotel 3">
+            </div>
+            <div class="content">
+                <h3>The Waterfront Hotel</h3>
+                <p>A contemporary hotel offering comfort and convenience with direct access to the Plaza Merdeka shopping center. It features an infinity pool overlooking the Sarawak River.</p>
+                <div class="attractions">
+                    <strong>Nearby Attractions:</strong> Old Courthouse, Sarawak State Legislative Assembly, Brooke Gallery at Fort Margherita.
+                </div>
+                <div class="location">Kuching Waterfront, Jalan Tun Abang Haji Openg.</div>
+            </div>
+        </div>
+
+        <div class="accommodation-box">
+            <div class="image-container">
+                <img src="hotel4.jpg" alt="Hotel 4">
+            </div>
+            <div class="content">
+                <h3>Hilton Kuching</h3>
+                <p>Located along the Sarawak River, Hilton Kuching provides world-class amenities, river-view rooms, and a prime location close to the city's attractions.</p>
+                <div class="attractions">
+                    <strong>Nearby Attractions:</strong> Darul Hana Bridge, Tua Pek Kong Temple, Carpenter Street (Chinatown).
+                </div>
+                <div class="location">Jalan Tunku Abdul Rahman, Kuching Waterfront.</div>
+            </div>
+        </div>
+        <!-- Repeat similar blocks for other hotels -->
+    </div>
+
+    <!-- Homestays -->
+    <section id="homestays" style="padding: 50px; background-color: #f8f9fa;">
+    <div class="category-title">Homestays</div>
+    <div class="container">
+        <!-- Homestay 1 -->
+        <div class="accommodation-box">
+            <div class="image-container">
+                <img src="homestay1.jpg" alt="Homestay 1">
+            </div>
+            <div class="content">
+                <h3>Annah Rais Longhouse Homestay</h3>
+                <p>Experience traditional Bidayuh longhouse living in a serene village surrounded by lush greenery. This homestay offers cultural activities like bamboo cooking and traditional dances.</p>
+                <div class="attractions">
+                    <strong>Nearby Attractions:</strong> Annah Rais Hot Springs, Borneo Highlands, Jungle trekking routes.
+                </div>
+                <div class="location">Annah Rais Village, about 60 km from Kuching City.</div>
+            </div>
+        </div>
+
+        <!-- Homestay 1 -->
+        <div class="accommodation-box">
+            <div class="image-container">
+                <img src="homestay2.jpg" alt="Homestay 2">
+            </div>
+            <div class="content">
+                <h3>Matang Homestay</h3>
+                <p>A perfect blend of nature and comfort, this homestay is near the lush landscapes of Kubah National Park. Guests can enjoy bird watching, jungle trekking, and visits to nearby waterfalls.</p>
+                <div class="attractions">
+                    <strong>Nearby Attractions:</strong> Kubah National Park, Matang Wildlife Centre, Mount Santubong.
+                </div>
+                <div class="location">Matang, Kuching.</div>
+            </div>
+        </div>
+
+        <!-- Homestay 1 -->
+        <div class="accommodation-box">
+            <div class="image-container">
+                <img src="homestay3.jpg" alt="Homestay 3">
+            </div>
+            <div class="content">
+                <h3> Nanga Sumpa Homestay</h3>
+                <p>Deep in the rainforest, this homestay provides a remote experience with an Iban community. Guests can enjoy longboat rides, wildlife spotting, and visits to nearby waterfalls.</p>
+                <div class="attractions">
+                    <strong>Nearby Attractions:</strong> Batang Ai National Park, Enseluai Waterfall, Iban cultural immersion.
+                </div>
+                <div class="location">Batang Ai, about 250 km from Kuching.</div>
+            </div>
+        </div>
+
+        <!-- Homestay 1 -->
+        <div class="accommodation-box">
+            <div class="image-container">
+                <img src="homestay4.jpeg" alt="Homestay 4">
+            </div>
+            <div class="content">
+                <h3>Kampung Benuk Homestay</h3>
+                <p>Located in one of Sarawak's oldest Bidayuh villages, this homestay provides an immersive cultural experience, including handicraft workshops and local cooking lessons.</p>
+                <div class="attractions">
+                    <strong>Nearby Attractions:</strong> Wind Cave Nature Reserve, Fairy Cave, Serikin Weekend Market.
+                </div>
+                <div class="location">34 km from Kuching, easily accessible by road.</div>
+            </div>
+        </div>
+        <!-- Repeat similar blocks for other homestays -->
+    </div>
+
+    <!-- Add similar sections for Camping -->
+    <div class="category-title">Camping</div>
+    <div class="container">
+            <!-- Camping 1 -->
+            <div class="accommodation-box">
+            <div class="image-container">
+            <img src="camping1.jpg" alt="Campsite 1"></div>
+            <div class="content">
+            <h3>Kubah National Park Campsite</h3>
+            <p>Located just outside Kuching, this campsite is perfect for hikers and wildlife enthusiasts. It offers basic camping facilities and is surrounded by lush rainforest and scenic waterfalls.</p>
+            <div class="attractions">
+                <strong>Nearby Attractions:</strong> Frog Pond, Waterfall Trail, Matang Wildlife Centre.
+            </div>
+            <div class="location">Kubah National Park, 20 km from Kuching.</div>
+        </div>
+        </div>
+
+        <!-- Camping 1 -->
+        <div class="accommodation-box">
+            <div class="image-container">
+            <img src="camping2.jpg" alt="Campsite 2"></div>
+            <div class="content">
+            <h3>Bako National Park Campsite</h3>
+            <p>This iconic national park offers a unique camping experience with the chance to spot proboscis monkeys, bearded pigs, and stunning coastal rock formations. Campsites are basic but offer a rare opportunity to immerse in nature.</p>
+            <div class="attractions">
+                <strong>Nearby Attractions:</strong> Telok Pandan Kecil Beach, Unique rock formations, Mangrove trails.
+            </div>
+            <div class="location">Accessible by boat from Kampung Bako (about 37 km from Kuching).</div>
+        </div>
+        </div>
+
+        <div class="accommodation-box">
+            <div class="image-container">
+            <img src="camping3.jpg" alt="Campsite 3"></div>
+            <div class="content">
+            <h3>Sematan Palm Beach Resort Campsite</h3>
+            <p>Though primarily a resort, Sematan also offers camping spots right by the beach, providing stunning ocean views and a relaxing seaside atmosphere.</p>
+            <div class="attractions">
+                <strong>Nearby Attractions:</strong> Talang-Satang National Park, Sebat Waterfall, Fishing and kayaking activities.
+            </div>
+            <div class="location">Sematan, approximately 2 hours’ drive from Kuching.</div>
+        </div>
+        </div>
+
+        <div class="accommodation-box">
+            <div class="image-container">
+            <img src="camping4.jpg" alt="Campsite 4"></div>
+            <div class="content">
+            <h3>Gunung Gading National Park Campsite</h3>
+            <p>Perfect for adventurers, this park is home to the world’s largest flower, the Rafflesia. The campsite offers serene surroundings and access to jungle trekking trails.</p>
+            <div class="attractions">
+                <strong>Nearby Attractions:</strong> Rafflesia Blooming Sites (seasonal), Waterfalls and hiking trails, Lundu Town.
+            </div>
+            <div class="location">Gunung Gading National Park, about 2 hours’ drive from Kuching.</div>
+        </div>
+        </div>
+    </div>    
+    <!-- Repeat for other campsites -->
+
+    <!-- Add similar sections for Luxury Stays -->
+    <!-- Repeat for other luxury stays -->
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="travel.html">Travel</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p>Email: info@sarawak.com</p>
+            <p>Phone: +60 123 456 789</p>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Sarawak Tourism. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
